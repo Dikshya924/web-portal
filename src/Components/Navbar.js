@@ -7,9 +7,9 @@ function Navbar() {
   return (
     <Nav>
       <Logo>
-          <Link to="/" className="link">
-              WEB PORTAL
-          </Link>
+        <Link to="/" className="link">
+          WEB PORTAL
+        </Link>
       </Logo>
       <Menu
         onClick={() => {
@@ -19,17 +19,29 @@ function Navbar() {
         <MenuIcon sx={{ fontSize: 35 }} />
       </Menu>
       <NavLinks isOpen={isOpen}>
-        <NavItem>
-          <Link to="/about" className="link" >
+        <NavItem
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          <Link to="/about" className="link">
             ABOUT US
           </Link>
         </NavItem>
-        <NavItem>
+        <NavItem
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
           <Link to="/contact" className="link">
             CONTACT US
           </Link>
         </NavItem>
-        <NavItem>
+        <NavItem
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
           <Link to="/" className="link">
             HOME
           </Link>
@@ -42,10 +54,10 @@ const Nav = styled.div`
   display: flex;
   align-items: center;
   padding: 10px;
-  position: sticky;
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: rgba(232, 242, 249);
+  /* background-color: transparent; */
   color: black;
   position: fixed;
   top: 0;
@@ -56,7 +68,7 @@ const NavLinks = styled.ul`
   list-style-type: none;
   justify-content: flex-end;
   margin-right: 20px;
- 
+
   @media (max-width: 768px) {
     overflow: hidden;
     flex-direction: column;
@@ -64,6 +76,7 @@ const NavLinks = styled.ul`
     width: 100%;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
   }
 `;
@@ -72,6 +85,12 @@ const NavItem = styled.li`
   .link {
     text-decoration: none;
     color: black;
+  }
+  &:hover {
+    .link{
+        color:blue;
+    }
+
   }
 `;
 const Logo = styled.div`
@@ -84,8 +103,8 @@ const Logo = styled.div`
     text-decoration: none;
     color: black;
   }
-  @media (max-width:768px){
-      margin-left: 0;
+  @media (max-width: 768px) {
+    margin-left: 0;
   }
 `;
 
