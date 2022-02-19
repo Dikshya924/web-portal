@@ -37,17 +37,22 @@ function Navbar() {
 const Nav = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   position: sticky;
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: rgba(232, 242, 249);
   color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
 `;
 const NavLinks = styled.ul`
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
+  margin-right: 20px;
+ 
   @media (max-width: 768px) {
     overflow: hidden;
     flex-direction: column;
@@ -81,6 +86,7 @@ const Menu = styled.button`
   border: none;
   background-color: transparent;
   color: black;
+  margin-right: 20px;
   @media (max-width: 768px) {
     display: flex;
   }

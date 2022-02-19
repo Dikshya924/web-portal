@@ -82,7 +82,7 @@ function Homepage() {
 }
 const Container = styled.div`
   padding: 20px;
-  /* background-color: rgba(232, 242, 249); */
+  padding-top: 100px;
   background-image: url("https://www.inoidsolutions.com/resources/images/background-images/banner-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,10 +97,11 @@ const Banner = styled.div`
     width: 100%;
     padding: 0%;
   }
+ 
 `;
 const Left = styled.div`
   /* margin-left: 20px; */
-  width: 50%;
+  width: 500px;
   height: 500px;
   span {
     color: #0073bc;
@@ -116,6 +117,10 @@ const Left = styled.div`
     width: 100%;
     margin-left: 0;
     padding: 0;
+  }
+  @media (max-width: 1124px){
+    padding: 0;
+    
   }
 `;
 const Right = styled.div`
