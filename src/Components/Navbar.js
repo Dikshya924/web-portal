@@ -6,7 +6,11 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <Logo>WEB PORTAL</Logo>
+      <Logo>
+          <Link to="/" className="link">
+              WEB PORTAL
+          </Link>
+      </Logo>
       <Menu
         onClick={() => {
           setIsOpen(!isOpen);
@@ -16,17 +20,17 @@ function Navbar() {
       </Menu>
       <NavLinks isOpen={isOpen}>
         <NavItem>
-          <Link to="/about" className="link" activeClassName="active">
+          <Link to="/about" className="link" >
             ABOUT US
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="/contact" className="link" activeClassName="active">
+          <Link to="/contact" className="link">
             CONTACT US
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="/" className="link" activeClassName="active">
+          <Link to="/" className="link">
             HOME
           </Link>
         </NavItem>
@@ -76,6 +80,10 @@ const Logo = styled.div`
   flex: 20%;
   font-size: 20px;
   margin-left: 20px;
+  .link {
+    text-decoration: none;
+    color: black;
+  }
   @media (max-width:768px){
       margin-left: 0;
   }

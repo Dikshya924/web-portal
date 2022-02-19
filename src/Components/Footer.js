@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <Footer_container>
@@ -30,9 +31,9 @@ function Footer() {
       </Footer__service>
       <Company>
         <h2>Company</h2>
-        <p>About</p>
-        <p>Contact</p>
-        <p>Home</p>
+        <Link to="/about" className="link">About</Link>
+        <Link to="/contact" className="link">Contact</Link>
+        <Link to="/" className="link">Home</Link>
       </Company>
     </Footer_container>
   );
@@ -48,6 +49,7 @@ const Footer_container = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 10px;
   }
 `;
 const Detail = styled.div`
@@ -60,5 +62,12 @@ const Detail = styled.div`
   }
 `;
 const Footer__service = styled.div``;
-const Company = styled.div``;
+const Company = styled.div`
+  display: flex;
+  flex-direction: column;
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+`;
 export default Footer;

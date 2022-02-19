@@ -101,8 +101,8 @@ const Banner = styled.div`
 `;
 const Left = styled.div`
   /* margin-left: 20px; */
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: auto;
   span {
     color: #0073bc;
   }
@@ -117,6 +117,7 @@ const Left = styled.div`
     width: 100%;
     margin-left: 0;
     padding: 0;
+    
   }
   @media (max-width: 1124px){
     padding: 0;
@@ -136,6 +137,7 @@ const Right = styled.div`
     img {
       width: 100%;
       margin-bottom: 50px;
+      margin-top: 50px;
     }
   }
 `;

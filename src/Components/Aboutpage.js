@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 function Aboutpage() {
   return (
     <About>
@@ -18,7 +17,7 @@ function Aboutpage() {
 }
 const About = styled.div`
   padding: 80px;
-  padding-top: 100px;
+  padding-top: 180px;
   background-image: url("https://www.inoidsolutions.com/resources/images/background-images/banner-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -27,17 +26,18 @@ const About = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  line-height: 1.4;
+  text-align: center;
   img{
     width: 100%;
     height: auto;
     object-fit: contain;
-    margin-top: 10px;
+    margin-top: 90px;
   }
   h1{
-    font-size: 70px;
-    font-weight: 650;
+    font-size: 60px;
+    font-weight:600;
     margin-bottom: 20px;
+    line-height: 1.4;
   }
   @media (max-width:768px){
     padding:10px;
