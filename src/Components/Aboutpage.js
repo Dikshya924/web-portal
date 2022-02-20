@@ -18,7 +18,7 @@ function Aboutpage() {
 const About = styled.div`
   padding: 80px;
   padding-top: 180px;
-  background-image: url("https://www.inoidsolutions.com/resources/images/background-images/banner-bg.svg");
+  background-image: url("https://www.inoidsolutions.com/resources/images/background-images/second-section-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

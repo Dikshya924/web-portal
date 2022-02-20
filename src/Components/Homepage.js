@@ -5,6 +5,7 @@ import Service from "./Service";
 function Homepage() {
   return (
     <Container>
+      {/* First Section */}
       <Banner>
         <Left>
           <h2>
@@ -24,6 +25,7 @@ function Homepage() {
           <img src="./images/home-banner-img.svg" alt="home-banner" />
         </Right>
       </Banner>
+      {/* Second Section */}
       <Services>
         <h2>
           <span>WHAT WE CAN DO FOR YOU</span>
@@ -58,6 +60,7 @@ function Homepage() {
           />
         </Cards>
       </Services>
+      {/* Third Section */}
       <Banner>
         <Left>
           <h2>
@@ -97,7 +100,6 @@ const Banner = styled.div`
     width: 100%;
     padding: 0%;
   }
- 
 `;
 const Left = styled.div`
   /* margin-left: 20px; */
@@ -117,11 +119,9 @@ const Left = styled.div`
     width: 100%;
     margin-left: 0;
     padding: 0;
-    
   }
-  @media (max-width: 1124px){
+  @media (max-width: 1124px) {
     padding: 0;
-    
   }
 `;
 const Right = styled.div`
@@ -142,8 +142,12 @@ const Right = styled.div`
   }
 `;
 const Services = styled.div`
-  padding: 20px;
   text-align: center;
+  background-image: url("https://www.inoidsolutions.com/resources/images/background-images/second-section-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
   span {
     color: #0073bc;
   }

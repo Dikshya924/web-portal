@@ -53,11 +53,10 @@ function Navbar() {
 const Nav = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 30px;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: rgba(232, 242, 249);
-  /* background-color: transparent; */
+  background-color: white;
   color: black;
   position: fixed;
   top: 0;
@@ -72,7 +71,7 @@ const NavLinks = styled.ul`
   @media (max-width: 768px) {
     overflow: hidden;
     flex-direction: column;
-    line-height: 2;
+    line-height: 5;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -88,7 +87,7 @@ const NavItem = styled.li`
   }
   &:hover {
     .link{
-        color:blue;
+        font-weight: bold;
     }
 
   }
